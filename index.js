@@ -5,7 +5,7 @@ $(document).ready(function () {
     console.log("ready!");
 });
 
-var api = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=" + apiKey "&q=" + input + "&begin_date";
+var api = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=" + apiKey "&q=" + input + "&begin_date=" + apiYearStart + "&start_date=" + apiYearEnd;
 // var TITLE = "the terminator";
 var apiKey = "rZvfCJAmSYG6Xug69Ga2vYrYsjsHo18G";
 
