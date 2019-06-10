@@ -29,7 +29,20 @@ function articleSearch() {
     $.ajax({
         url: url,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
+        // create new row
+        var article = $("<article>");
+
+        var title = $("<h3>").text(response.Title);
+        var year = $("<h3>").text(response.Year);
+        // 
+        article.append(title, year, actors, ratings);
+        
+        $("search-results").append(article);
+        console.log(response);
+        console.log(response.Ratings[0].Value);
+
+        // $('#m > tbody:last-child').append(tRow);
 
     });
-
+}
