@@ -5,7 +5,9 @@ $(document).ready(function () {
     console.log("ready!");
 });
 
+
 var api = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=" + apiKey "&q=" + input + "&begin_date=" + apiYearStart + "&start_date=" + apiYearEnd;
+
 // var TITLE = "the terminator";
 var apiKey = "rZvfCJAmSYG6Xug69Ga2vYrYsjsHo18G";
 
@@ -17,14 +19,17 @@ var recordNum = $('#record-num');
 
 var input = $('#search-input');
 
-$('#submit').on('click', articleSearch);
 
-console.log($("#submit"))
+$('#submit-btn').on('click',articleSearch);
+
+
+console.log($("#submit-btn"))
 
 function articleSearch() {
     event.preventDefault();
 
-    var url = api + input.val() + apiKey;
+    var url = api;
+    // + input.val() + apiKey;
     console.log(url);
     $.ajax({
         url: url,
@@ -36,7 +41,7 @@ function articleSearch() {
         var title = $("<h3>").text(response.Title);
         var year = $("<h3>").text(response.Year);
         // 
-        article.append(title, year, actors, ratings);
+        article.append(title, year);
         
         $("search-results").append(article);
         console.log(response);
