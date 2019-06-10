@@ -1,0 +1,21 @@
+.display-4 {
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: #20315A;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.card-header {
+    background-color: #20315A;
+}
+
+.btn {
+    background-color: #95A5A6;
+    font: #FFFFFF;
+}
