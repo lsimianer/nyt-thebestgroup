@@ -5,7 +5,7 @@
     console.log( "ready!" );
 });
 
-var api = "https://www.omdbapi.com/?t=";
+var api = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey";
 // var TITLE = "the terminator";
 var apiKey = "&apikey=a5c61811";
 
@@ -17,15 +17,16 @@ var recordNum = $('#mtitle');
 
 var input = $('#mtitle');
 
-$('#submit').on('click',articleSearch);
+$('#submit-btn').on('click',articleSearch);
 
-console.log($("#submit"))
+console.log($("#submit-btn"))
 
 
 function articleSearch() {
     event.preventDefault();
 
-    var url = api + input.val() + apiKey;
+    var url = api;
+    // + input.val() + apiKey;
     console.log(url);
     $.ajax({
         url: url,
@@ -37,7 +38,7 @@ function articleSearch() {
         var title = $("<h3>").text(response.Title);
         var year = $("<h3>").text(response.Year);
         // 
-        article.append(title, year, actors, ratings);
+        article.append(title, year);
         
         $("search-results").append(article);
         console.log(response);
