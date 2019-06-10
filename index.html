@@ -15,6 +15,62 @@
 
 </head>
 <body>
+<div class="container">
+<!-- Jumbotron -->    
+    <div class="row">
+        <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">New York Times Search</h1>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+<!-- Search Box -->    
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Search Term:</label>
+                    <input type="email" class="form-control" id="search-input" aria-describedby="emailHelp" placeholder="">
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Number of records to receive:</label>
+                        <select class="form-control" id="record-num">
+                          <option>1</option>
+                          <option>5</option>
+                          <option>10</option>
+                        </select>
+                      </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Start year (optional):</label>
+                    <input type="password" class="form-control" id="start-year" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">End year (optional):</label>
+                    <input type="password" class="form-control" id="end-year" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                <button type="submit" class="btn btn-primary" id="clear-btn">Clear</button>
+            </form>
+                      
+        </div>
+
+    </div>
+<!-- Article Box -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Top Articles</div>
+                <div id="search-results" class="card-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 </body>
 </html>
